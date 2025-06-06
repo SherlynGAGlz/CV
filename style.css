@@ -1,0 +1,188 @@
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background: linear-gradient(to right, lightcoral);
+      padding: 40px;
+      color: black;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: auto;
+      background: #ffffff;
+      border-radius: 20px;
+      box-shadow: 0 10px 40px rgba(143, 188, 219, 0.3);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .main-section {
+      display: flex;
+      flex-direction: row;
+    }
+
+    .left-section {
+      color: black;
+      width: 35%;
+      padding: 30px;
+    }
+
+    .right-section {
+      padding: 30px;
+      width: 65%;
+    }
+
+    .profile-pic {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 20px;
+      border: 3px solid #e5e9f0;
+    }
+
+    .name {
+      font-size: 22px;
+      font-weight: bold;
+      white-space: nowrap;
+      overflow: hidden;
+      border-right: 2px solid black;
+      width: 0;
+      animation: typing 2.5s steps(20, end) forwards, blink 0.7s infinite;
+      color: #2e3440;
+    }
+
+    @keyframes typing {
+      from { width: 0; }
+      to { width: 100%; }
+    }
+
+    @keyframes blink {
+      50% { border-color: transparent; }
+    }
+
+    .section-title {
+      font-size: 18px;
+      font-weight: bold;
+      margin-top: 20px;
+      margin-bottom: 10px;
+      border-bottom: 2px solid #d8dee9;
+      display: inline-block;
+      color: black;
+    }
+
+    .info-item {
+      margin-bottom: 10px;
+      font-size: 14px;
+      color: black;
+    }
+
+    .download-btn {
+      margin-top: 30px;
+      padding: 10px 20px;
+      background-color: lightcoral; /* Azul medio suave */
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .download-btn:hover {
+      background-color: black;
+    }
+
+    /* Secciones adicionales dentro del mismo contenedor */
+    .section {
+      padding: 30px;
+      background-color: #ffffff;
+      border-top: 1px solid #e5e9f0;
+    }
+
+    .section h2 {
+      font-size: 20px;
+      font-weight: bold;
+      margin-bottom: 15px;
+      text-align: center;
+      color: black;
+    }
+
+    /* Carrusel */
+    .carousel {
+      position: relative;
+      overflow: hidden;
+      width: 100%;
+      max-width: 600px;
+      margin: 0 auto 30px auto;
+      border-radius: 10px;
+      box-shadow: 0 4px 15px black;
+    }
+
+    .carousel-track {
+      display: flex;
+      transition: transform 0.5s ease;
+    }
+
+    .carousel img {
+      width: 100%;
+      flex-shrink: 0;
+      object-fit: contain;
+      padding: 10px;
+      background-color: #f8f9fa;
+    }
+
+    .carousel-btn {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background-color: lightpink;
+      color: white;
+      border: none;
+      padding: 10px 15px;
+      cursor: pointer;
+      z-index: 1;
+      border-radius: 50%;
+      transition: background-color 0.3s ease;
+    }
+
+    .carousel-btn:hover {
+      background-color: lightcoral;
+    }
+
+    .carousel-btn.prev {
+      left: 15px;
+    }
+
+    .carousel-btn.next {
+      right: 15px;
+    }
+
+    /* Contacto */
+    .contact-info {
+      max-width: 600px;
+      margin: auto;
+      text-align: left;
+    }
+
+    .contact-info p {
+      margin-bottom: 10px;
+      font-size: 14px;
+      color: black;
+    }
+
+    .contact-info a {
+      color: black;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    .contact-info a:hover {
+      color: black;
+      text-decoration: underline;
+    }

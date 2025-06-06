@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Mi CV</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <div class="main-section">
+      <div class="left-section">
+        <div class="name" id="typewriter">Sherlyn Avila Gonzalez</div>
+        <br><p class="info-item">Web Developer | Artificial Intelligent | Data Analyst</p>
+
+        <p class="section-title">Contact</p>
+        <div class="contact-info">
+        <p>sherlynavilagonzalez2@gmail.com</p>
+        <p>+52 449 437 7315</p>
+        <p>linkedin.com/in/johndoe</p>
+      </div>
+
+        <p class="section-title">Skills</p>
+        <p class="info-item">HTML, CSS, JavaScript</p>
+        <p class="info-item">React, Node.js</p>
+      </div>
+
+      <div class="right-section">
+        <p class="section-title">Profile</p>
+        <p class="info-item">
+          TSU student in Artificial Intelligence with creative and critical thinking, oriented to problem solving and autonomous learning. I stand out for my adaptability, resilience and empathy, qualities that allow me to integrate effectively in multidisciplinary teams.
+          I am looking for a professional opportunity where I can develop my potential, acquire practical experience and contribute with commitment and enthusiasm to the growth of the organization. I am motivated to learn, add value and become a professional who makes a positive difference.
+
+        </p>
+
+        <p class="section-title">Relevant Projects</p>
+        <p class="info-item">
+          <strong>Project “Falcon”</strong> – Cybersecurity Hackathon<br>
+          (2024)<br>
+          Intelligent vision system that through convolutional neural networks helps us to make predictions about incidents
+          (brawls, assaults, robberies) through security cameras, system integration of AI modules and web and mobile platforms. 
+        </p>
+
+        <p class="section-title">Education</p>
+        <p class="info-item">
+          <strong>Metropolitan Technological University of Aguascalientes</strong><br>
+          TSU Artificial Intelligence – 2023 – CURRENTLY
+        </p>
+        <p class="section-title">Education</p>
+        <p class="info-item">
+          <strong>CBTIS 168 “FRANCISCO I. MADERO”</strong><br>
+          Technical Degree in Programming – 2020 - 2023
+        </p>
+
+        <a href="CV - SGAG.pdf" download>
+          <button class="download-btn">Download CV</button>
+        </a>
+      </div>
+    </div>
+
+    <section id="certificados" class="section">
+      <h2>Certificados</h2>
+      <div class="carousel">
+        <div class="carousel-track">
+          <img src="img/Gestion.png" alt="Certificado 1">
+          <img src="img/Google.png" alt="Certificado 2">
+          <img src="img/IA.png" alt="Certificado 3">
+          <img src="img/Pensamiento.png" alt="Certificado 4">
+          <img src="img/Transformacion.png" alt="Certificado 5">
+        </div>
+        <button class="carousel-btn prev">&#10094;</button>
+        <button class="carousel-btn next">&#10095;</button>
+      </div>
+    </section>
+
+  <script>
+    const track = document.querySelector(".carousel-track");
+    const prevBtn = document.querySelector(".carousel-btn.prev");
+    const nextBtn = document.querySelector(".carousel-btn.next");
+    const imgs = document.querySelectorAll(".carousel img");
+    let index = 0;
+
+    function updateCarousel() {
+      const width = imgs[0].clientWidth;
+      track.style.transform = `translateX(-${index * width}px)`;
+    }
+
+    nextBtn.addEventListener("click", () => {
+      index = (index + 1) % imgs.length;
+      updateCarousel();
+    });
+
+    prevBtn.addEventListener("click", () => {
+      index = (index - 1 + imgs.length) % imgs.length;
+      updateCarousel();
+    });
+
+    window.addEventListener("resize", updateCarousel);
+    window.addEventListener("load", updateCarousel);
+  </script>
+
+</body>
+</html>
